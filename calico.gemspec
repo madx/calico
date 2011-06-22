@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name        = 'calico'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = '2011-06-21'
   s.summary     = 'Calico'
-  s.description = 'A lightweight Markdown subset'
+  s.description = 'A lightweight markup language'
   s.authors     = ["François Vaux"]
   s.email       = 'madx@yapok.org'
   s.files       = ['lib/calico.rb']
