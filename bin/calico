@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'calico'
+
+puts Calico.new(STDIN.read).to_html
