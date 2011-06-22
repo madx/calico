@@ -6,6 +6,7 @@ class Calico < String
 
   def parse
     strip!
+    delete!("\r")
     split(/\n*^(---.*?^---)\n*|(?:\n\n+)/m).map do |block|
       case block
       when /\A\*\s/
