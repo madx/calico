@@ -1,6 +1,7 @@
 class Calico < String
 
-  def to_html
+  def to_html(&blk)
+    @filter = block_given? ? blk : lambda {|x| x }
     render(parse)
   end
 
@@ -54,7 +55,7 @@ class Calico < String
   end
 
   def inline(text)
-     xml_escape(text).gsub(/\\\\$/, '<br />').
+     @filter.call xml_escape(text).gsub(/\\\\$/, '<br />').
           gsub(/\\([^\\\n]|\\(?!\n))/) { "&Calico#{$&.unpack("U*")[1]};" }.
           gsub(/&(?!#\d+;|#x[\da-fA-F]+;|\w+;)/, "&amp;").
           gsub(/(`+)(.+?)\1/m,               tag(:code,   '\2')).
