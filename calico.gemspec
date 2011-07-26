@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'calico'
-  s.version     = '0.1.3'
-  s.date        = '2011-06-21'
+  s.version     = '0.1.4'
+  s.date        = '2011-07-26'
   s.summary     = 'Calico'
   s.description = 'A lightweight markup language'
   s.authors     = ["François Vaux"]
